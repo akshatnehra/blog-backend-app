@@ -15,11 +15,11 @@ const PORT = process.env.PORT || 3000;
 
 // mount route
 app.use('/api/v1/comments', commentRoute);
-// app.use('/api/v1/likes', likeRoute);
-// app.use('/api/v1/posts', postRoute);
+app.use('/api/v1/likes', likeRoute);
+app.use('/api/v1/posts', postRoute);
+
+connectDB();
 
 app.listen(PORT, ()=> {
     console.log("App running on PORT: " + PORT);
 }) 
-
-connectDB();

@@ -3,7 +3,7 @@ const router = express.Router();
 const { likePost } = require('../controller/likePostController');
 const { unlikePost } = require('../controller/unlikePostController');
 
-router.get('/like', likePost);
-router.get('/unlike', unlikePost);
+router.post('/like', likePost);
+router.post('/unlike', unlikePost);
 
 module.exports = router;
